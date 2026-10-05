@@ -1,0 +1,14 @@
+{
+  "name": "qode-jest-template-v1",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A small JavaScript library and its Jest test suite",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
