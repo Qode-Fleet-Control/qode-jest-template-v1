@@ -13,6 +13,8 @@ FROM node:22-alpine AS runtime
 ARG BUILD_ID=""
 ENV BUILD_ID=$BUILD_ID CI=true
 WORKDIR /app
+# WORKDIR is created by root; the node user installs into it.
+RUN chown node:node /app
 COPY --chown=node:node package.json package-lock.json ./
 USER node
 RUN npm ci
